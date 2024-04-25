@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output,EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-test',
@@ -9,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class TestComponent {
 
+  @Input() mensagemRecebida : string = "";
+  @Output() mensagemEnviada = new EventEmitter<string>()
+
+  EnviarParaApp(){
+    this.mensagemEnviada.emit('Estou sendo Obs!');
+  }
 }

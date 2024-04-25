@@ -1,2 +1,48 @@
 <p>Olá mundo</p>
-<app-test></app-test>
+<app-test [mensagemRecebida]="mensagem" (mensagemEnviada)="meMostreApp($event)"></app-test>
+
+<hr>
+<h1>{{title}}</h1>
+<h1>{{nome}}</h1>
+<h1>{{nomes[1]}}</h1>
+
+<hr>
+<ul>
+  <li *ngFor="let nome of nomes">
+    {{nome}}
+  </li>
+</ul>
+<hr>
+
+<ul>
+  @for(nome of nomes; track $index){
+    <li>{{nome}}</li>
+}
+</ul>
+
+<ul>
+  <li *ngIf="vaiAparecer; else naoVaiAparecer">
+  Estou aqui
+  </li>
+  <ng-template #naoVaiAparecer>
+    <li>Não estou aparecendo</li>
+  </ng-template>
+</ul>
+
+<hr>
+
+<ul>
+    @if(vaiAparecer){
+      <li>Estou aparecendo 2</li>
+    }@else{
+      <li>Não estou aparecendo 2</li>
+    }
+</ul>
+
+<h5 class="letraMaiuscula">Texto do H5</h5>
+
+<hr>
+<button (click)="meMostre()">clique</button>
+
+<hr>
+

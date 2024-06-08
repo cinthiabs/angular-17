@@ -10,13 +10,14 @@ import { Componente07Component } from './componente07-ngstyle/componente07.compo
 import { Componente08Component } from './componente08-control-flow/componente08.component';
 import { Componente09Component } from './componente09-form-ngmodel/componente09.component';
 import { Componente10Component } from './componente10/componente10.component';
+import { GrudAngularComponent } from './grud-angular/grud-angular.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, ComponenteComponent,Componente02Component,Componente03Component,
     Componente04Component,Componente05Component, Componente06Component,Componente07Component,
-    Componente08Component, Componente09Component, Componente10Component ],
+    Componente08Component, Componente09Component, Componente10Component, GrudAngularComponent ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

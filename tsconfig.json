@@ -2,6 +2,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "strictNullChecks": false, //consigo criar variavel sem precisar passar um valor
     "outDir": "./dist/out-tsc",
     "strict": true,
     "noImplicitOverride": true,

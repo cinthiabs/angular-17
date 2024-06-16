@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Person } from '../model/Person';
 
 @Component({
   selector: 'app-grud-angular',
@@ -16,4 +17,23 @@ export class GrudAngularComponent {
     idade: new FormControl(null,[Validators.required, Validators.min(0), Validators.max(120)]),
     cidade: new FormControl('',[Validators.required, Validators.minLength(3)])
   });
+
+  // Visibilidade dos botoes
+  btnCadastrar: boolean = true;
+
+  //Vetor
+  vetor:Person[] = [];
+
+  //funcao cadastro
+  cadastrar(){
+
+    //cadastro no vetor
+    this.vetor.push(this.formulario.value as Person);
+
+    //limpar os inputs
+    this.formulario.reset();
+
+    //visualizar  table via console
+    console.table(this.vetor)
+  }
 }

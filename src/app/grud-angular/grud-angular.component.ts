@@ -52,4 +52,18 @@ export class GrudAngularComponent {
 
     this.btnCadastrar = false;
   }
+
+  alterar(){
+    //alterar vetor
+    this.vetor[this.indice] = this.formulario.value as Person
+
+    //Limpar os inputs
+    this.formulario.reset();
+
+    this.btnCadastrar  = true;
+  }
+
+  cancelar(){
+    this.formulario.reset();
+  }
 }

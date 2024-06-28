@@ -65,6 +65,7 @@ export class GrudAngularComponent {
 
   cancelar(){
     this.formulario.reset();
+    this.btnCadastrar = true;
   }
   remover(){
     //removendo Person do vetor
